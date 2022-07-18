@@ -48,12 +48,13 @@ Após a compilação, para rodar o código, basta digitar:
 $ Make run
 ```
 Caso tudo tenha funcionado como deveria, a aplicação irá perguntar o IP local do host onde o servidor se encontra. Esse IP será necessário para que os clientes possam se conectar ao servidor.  
-Repita essas etapas em uma nova janela do terminal mais uma vez, pois o chat funciona somente com dois clientes conectados no mesmo servidor.
 
 ### Instruções Para Usar o Chat:
 
-Com tudo funcionando, o chat está pronto para ser usado. Em qualquer um dos dois clientes digite uma mensagem em sua respectiva aba do terminal e aperte enter, após isso verifique a aba do outro cliente, a mensagem digitada aparecerá lá e vice-versa.
-Para finalizar a aplicação, digite ``exit``
+Para se conectar ao servidor, utilize o comando ``/connect``, seguido do IP local do host. Após a conexão, o comando ``/help`` pode ser utilizado para mostrar todos os outros comandos disponíveis
+
+Com tudo funcionando, o chat está pronto para ser usado. Em qualquer um dos clientes digite uma mensagem em sua respectiva aba do terminal e aperte enter, após isso verifique a aba dos outros clientes, a mensagem digitada aparecerá lá e vice-versa.
+Para finalizar a aplicação, digite ``/quit``
 
 ## Problemas encontrados  
 Caso tente rodar o servidor de novo pouco tempo depois de tê-lo rodado a primeira vez é possível que haja um erro de binding, nessa situação espere alguns minutos para o IP e porta ficarem disponíveis novamente e execute o código mais uma vez
