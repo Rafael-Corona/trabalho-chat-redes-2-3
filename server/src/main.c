@@ -30,7 +30,8 @@ typedef struct {
 
 int main(){
 
-    //Master socket é o servidor, client_0 e client_1 são os sockets das aplicações que iram se comunicar, client_sockets é o vetor que os sockets das aplicações seram armazenados.
+    //Master socket é o servidor, 
+    //client_sockets é o vetor que os sockets das aplicações seram armazenados.
     int master_socket , addrlen , new_socket ,
               max_clients = 30 , activity, i , sd;
     int max_sd;

@@ -46,7 +46,6 @@ void* send_message(void* b){
         __fpurge(stdin);
         read_strings(s->buffer);
 
-        //Se o usuário digitar o comando /quit finalizamos o cliente.
         if(strcmp(s->buffer, "/help") == 0){
 	    printf("/ping - The server returns pong when receive this message\n");
             printf("/join <channelName> - Enters the channel. The first user to join the channel will be it's administrator\n");
@@ -58,6 +57,7 @@ void* send_message(void* b){
             printf("/unmute <userName> - Unmutes user on channel\n");
             printf("/whois <userName> - shows user IP only to administrator\n");
 	}
+     //Se o usuário digitar o comando /quit finalizamos o cliente.
 	else if(strcmp(s->buffer, "/quit") == 0){
             close(s->sock);
             printf("Application finished!\n");
