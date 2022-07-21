@@ -61,14 +61,15 @@ void* send_message(void* b){
             printf("/mute <userName> - Mutes user on channel\n");
             printf("/unmute <userName> - Unmutes user on channel\n");
             printf("/whois <userName> - shows user IP only to administrator\n");
-    }
-     //Se o usuário digitar o comando /quit finalizamos o cliente.
-    else if(strcmp(s->buffer, "/quit") == 0){
+            continue;
+        }
+        //Se o usuário digitar o comando /quit finalizamos o cliente.
+        else if(strcmp(s->buffer, "/quit") == 0){
             close(s->sock);
             printf("Application finished!\n");
             exit(EXIT_SUCCESS);
         }
-    if(strlen(s->buffer) > 0){
+        if(strlen(s->buffer) > 0){
             send(s->sock, s->buffer, strlen(s->buffer)+1, 0);
         }
     }
