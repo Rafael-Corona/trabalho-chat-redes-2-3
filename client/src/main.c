@@ -147,7 +147,6 @@ int main(){
 
             //Printamos a mensagem recebida do servidor para o usuário.
             printf("%s\n", buffer);
-
         }
     }
 
