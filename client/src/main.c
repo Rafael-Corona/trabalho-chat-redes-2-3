@@ -25,10 +25,15 @@ void read_strings(char* buffer){
     int tam = 0;
     char c = getchar();
 
-    while(tam < 4096 && c != '\n'){
+    while(tam < 4096 && c != '\n' && c != EOF){
         buffer[tam] = c;
         tam++;
         c = getchar();
+    }
+
+    if(c == EOF){
+        printf("Application finished!\n");
+        exit(EXIT_SUCCESS);
     }
 
     buffer[tam] = '\0';
@@ -47,7 +52,7 @@ void* send_message(void* b){
         read_strings(s->buffer);
 
         if(strcmp(s->buffer, "/help") == 0){
-	    printf("/ping - The server returns pong when receive this message\n");
+        printf("/ping - The server returns pong when receive this message\n");
             printf("/join <channelName> - Enters the channel. The first user to join the channel will be it's administrator\n");
             printf("/nickname <desiredNickname> - The client will now be called by the chosen nickname\n");
             printf("/help - Shows this help message again\n\n");
@@ -56,14 +61,14 @@ void* send_message(void* b){
             printf("/mute <userName> - Mutes user on channel\n");
             printf("/unmute <userName> - Unmutes user on channel\n");
             printf("/whois <userName> - shows user IP only to administrator\n");
-	}
+    }
      //Se o usuário digitar o comando /quit finalizamos o cliente.
-	else if(strcmp(s->buffer, "/quit") == 0){
+    else if(strcmp(s->buffer, "/quit") == 0){
             close(s->sock);
             printf("Application finished!\n");
             exit(EXIT_SUCCESS);
         }
-	if(strlen(s->buffer) > 0){
+    if(strlen(s->buffer) > 0){
             send(s->sock, s->buffer, strlen(s->buffer)+1, 0);
         }
     }
