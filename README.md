@@ -56,6 +56,9 @@ Para se conectar ao servidor, utilize o comando ``/connect``, seguido do IP loca
 Com tudo funcionando, o chat está pronto para ser usado. Em qualquer um dos clientes digite uma mensagem em sua respectiva aba do terminal e aperte enter, após isso verifique a aba dos outros clientes, a mensagem digitada aparecerá lá e vice-versa.
 Para finalizar a aplicação, digite ``/quit``
 
+### Video demonstrando o funcionamento do chat
+[Link para o vídeo](https://drive.google.com/file/d/11l7LMTVAoijkJFmhPr3SDjF8MQ4Zz5XV/view?usp=sharing)  
+
 ## Problemas encontrados  
 Caso tente rodar o servidor de novo pouco tempo depois de tê-lo rodado a primeira vez é possível que haja um erro de binding, nessa situação espere alguns minutos para o IP e porta ficarem disponíveis novamente e execute o código mais uma vez
 ## Comentários adicionais  
