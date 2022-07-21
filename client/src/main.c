@@ -98,7 +98,7 @@ int main(){
     serv_addr.sin_family = AF_INET; //IPV4
     serv_addr.sin_port = htons(PORT);   //Porta 8080.
 
-    printf("Please type the command \"/connect\" and the local ip of the server's host: ");
+    printf("Please type the command \"/connect\" and the ip of the server's host: ");
 
     scanf("%s", buffer);
 
